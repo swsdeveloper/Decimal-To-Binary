@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decimal To Binary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en1-4U-Vwf">
+                                <rect key="frame" x="83" y="28" width="208" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="uyv-g0-PwY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-yw-98j">
+                                <rect key="frame" x="16" y="123" width="123" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VED-FL-nC9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbW-ix-lO1">
+                                <rect key="frame" x="147" y="119" width="212" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ljK-ec-mbv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yA-Wf-iqN">
+                                <rect key="frame" x="147" y="172" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xoX-lv-roB"/>
+                                </constraints>
+                                <state key="normal" title="Convert to Binary">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertToBinaryButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="a9F-vP-EH9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPY-0Y-r9I">
+                                <rect key="frame" x="16" y="246" width="343" height="94"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99559690665031431" green="1" blue="0.70638751830863955" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IPY-0Y-r9I" firstAttribute="top" secondItem="4yA-Wf-iqN" secondAttribute="bottom" constant="44" id="1KB-aG-HCm"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IPY-0Y-r9I" secondAttribute="bottom" constant="327" id="3BB-3j-gaj"/>
+                            <constraint firstItem="qbW-ix-lO1" firstAttribute="trailing" secondItem="IPY-0Y-r9I" secondAttribute="trailing" id="BHO-2s-rzi"/>
+                            <constraint firstItem="Kok-yw-98j" firstAttribute="top" secondItem="en1-4U-Vwf" secondAttribute="bottom" constant="63" id="COF-Yq-y3u"/>
+                            <constraint firstItem="qbW-ix-lO1" firstAttribute="top" secondItem="en1-4U-Vwf" secondAttribute="bottom" constant="59" id="L0f-6D-CsJ"/>
+                            <constraint firstItem="IPY-0Y-r9I" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Qhz-h6-N3T"/>
+                            <constraint firstItem="en1-4U-Vwf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="Sis-YK-2hB"/>
+                            <constraint firstItem="IPY-0Y-r9I" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="l2D-Pz-Ph1"/>
+                            <constraint firstItem="4yA-Wf-iqN" firstAttribute="top" secondItem="qbW-ix-lO1" secondAttribute="bottom" constant="23" id="n4I-Wp-G3k"/>
+                            <constraint firstItem="4yA-Wf-iqN" firstAttribute="leading" secondItem="qbW-ix-lO1" secondAttribute="leading" id="oOR-fS-sa9"/>
+                            <constraint firstItem="en1-4U-Vwf" firstAttribute="centerX" secondItem="IPY-0Y-r9I" secondAttribute="centerX" id="szq-Ir-w2u"/>
+                            <constraint firstItem="en1-4U-Vwf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="67" id="uqr-0W-P56"/>
+                            <constraint firstItem="Kok-yw-98j" firstAttribute="leading" secondItem="IPY-0Y-r9I" secondAttribute="leading" id="veu-r6-Wjc"/>
+                            <constraint firstItem="qbW-ix-lO1" firstAttribute="leading" secondItem="Kok-yw-98j" secondAttribute="trailing" constant="8" symbolic="YES" id="ysn-iE-EJZ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="binaryStringLabel" destination="IPY-0Y-r9I" id="KdE-Zx-cyc"/>
+                        <outlet property="decimalNumTextField" destination="qbW-ix-lO1" id="qYe-xh-6GW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
